@@ -1,0 +1,15 @@
+.CartPopup {
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  border: 1px solid;
+  border-color: grey;
+  margin-top: 90px;
+  left: 77%;
+}
+
+.CartPopup p {
+  margin: 6px;
+  line-height: 0.8;
+  /* font-size: 200px; */
+}

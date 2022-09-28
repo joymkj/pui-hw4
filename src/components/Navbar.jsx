@@ -1,6 +1,6 @@
 import './Navbar.css';
 
-function Navbar() {
+function Navbar(props) {
   return (
     <div className="Header">
       <div className="header">
@@ -16,6 +16,11 @@ function Navbar() {
               </li>
             </ul>
           </nav>
+          <p className="cart-info">
+            {props.cartSize} items
+            <br />
+            Total: $ {props.cartTotal.toFixed(2)}
+          </p>
           <hr />
           <h1>Our hand-made cinnamon rolls</h1>
         </div>
