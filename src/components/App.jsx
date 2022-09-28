@@ -9,7 +9,6 @@ function App() {
   const [cartTotal, setCartTotal] = useState(0.0);
   const [latestRoll, setLatestRoll] = useState('');
   const [showPopup, setShowPopup] = useState(false);
-  let timeout;
 
   const updateCart = (Roll) => {
     setCartSize(cartSize + 1);
