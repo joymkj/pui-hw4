@@ -1,4 +1,5 @@
 import './Navbar.css';
+import CartPopup from './CartPopup';
 
 function Navbar(props) {
   return (
@@ -16,6 +17,7 @@ function Navbar(props) {
               </li>
             </ul>
           </nav>
+          <CartPopup roll={props.roll} cartSize={props.cartSize} showPopup={props.showPopup} />
           <p className="cart-info">
             {props.cartSize} items
             <br />

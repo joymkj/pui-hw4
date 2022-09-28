@@ -1,7 +1,7 @@
 import './CartPopup.css';
 
 function CartPopup(props) {
-  return (
+  return props.showPopup && props.cartSize ? (
     <div className="CartPopup">
       <p>Added to cart:</p>
       <br />
@@ -12,6 +12,8 @@ function CartPopup(props) {
       <p>Pack of {props.roll.packSize}</p>
       <p>Price: {props.roll.price}</p>
     </div>
+  ) : (
+    ''
   );
 }
 

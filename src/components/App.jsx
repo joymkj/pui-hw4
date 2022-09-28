@@ -1,7 +1,6 @@
 import './App.css';
 import Navbar from './Navbar.jsx';
 import Product from './Product.jsx';
-import CartPopup from './CartPopup';
 
 import { useState, useEffect } from 'react';
 
@@ -9,6 +8,8 @@ function App() {
   const [cartSize, setCartSize] = useState(0);
   const [cartTotal, setCartTotal] = useState(0.0);
   const [latestRoll, setLatestRoll] = useState('');
+  const [showPopup, setShowPopup] = useState(false);
+  let timeout;
 
   const updateCart = (Roll) => {
     setCartSize(cartSize + 1);
@@ -17,16 +18,18 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(latestRoll);
-    console.log(cartSize);
-    console.log(cartTotal);
+    setShowPopup(true);
+    let timer = setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
+    return () => {
+      clearTimeout(timer);
+    };
   }, [cartSize]);
 
   return (
     <div className="App">
-      <CartPopup roll={latestRoll} />
-      <Navbar cartSize={cartSize} cartTotal={cartTotal} />
-
+      <Navbar cartSize={cartSize} cartTotal={cartTotal} roll={latestRoll} showPopup={showPopup} />
       <div className="Gallery">
         <Product id="original" updateCart={updateCart} />
         <Product id="apple" updateCart={updateCart} />
