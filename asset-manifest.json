@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/pui-hw4/static/css/main.a824f417.css",
-    "main.js": "/pui-hw4/static/js/main.f27fb21d.js",
+    "main.js": "/pui-hw4/static/js/main.6e2536b0.js",
     "index.html": "/pui-hw4/index.html",
     "main.a824f417.css.map": "/pui-hw4/static/css/main.a824f417.css.map",
-    "main.f27fb21d.js.map": "/pui-hw4/static/js/main.f27fb21d.js.map"
+    "main.6e2536b0.js.map": "/pui-hw4/static/js/main.6e2536b0.js.map"
   },
   "entrypoints": [
     "static/css/main.a824f417.css",
-    "static/js/main.f27fb21d.js"
+    "static/js/main.6e2536b0.js"
   ]
 }
