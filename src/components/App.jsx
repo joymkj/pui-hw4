@@ -15,7 +15,7 @@ function App() {
     setCartSize(cartSize + 1);
     setCartTotal(cartTotal + parseFloat(Roll.price));
     setLatestRoll(Roll);
-    setCart((current) => [...current, Roll]);
+    cart.push(Roll);
     console.log(cart);
   };
 
