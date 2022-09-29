@@ -8,12 +8,13 @@ function Product({ id, updateCart }) {
   const [packSize, setPackSize] = useState(1);
 
   function addToCart() {
-    updateCart({
+    let roll = {
       type: Inventory[id].name,
       price: price,
       glazing: glazing,
       packSize: packSize,
-    });
+    };
+    updateCart(roll);
   }
 
   useEffect(() => {

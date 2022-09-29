@@ -9,11 +9,14 @@ function App() {
   const [cartTotal, setCartTotal] = useState(0.0);
   const [latestRoll, setLatestRoll] = useState('');
   const [showPopup, setShowPopup] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const updateCart = (Roll) => {
     setCartSize(cartSize + 1);
     setCartTotal(cartTotal + parseFloat(Roll.price));
     setLatestRoll(Roll);
+    setCart((current) => [...current, Roll]);
+    console.log(cart);
   };
 
   useEffect(() => {
